@@ -27,7 +27,7 @@ Experimento Flutter com Push Notification pelo Onesignal e Firebase
         * add line to dependencies:   implementation 'com.google.firebase:firebase-analytics:17.2.2'
         * add line to final file:  apply plugin: 'com.google.gms.google-services'
     * restart / rebuild project
-    
+
 3. OneSignal 
     * Add onesignal_flutter: ^2.3.4 to pubspec.yaml
     * project/android/build.gradle
@@ -40,5 +40,10 @@ Experimento Flutter com Push Notification pelo Onesignal e Firebase
     # IF errors
         *  cd project/android
         *  gradlew --stacktrace 
+
+4.  Init Onesignal
+    * Add line to build of AppWidget     OneSignal.shared.init('APP_ID');
+
+
 
 
