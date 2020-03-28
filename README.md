@@ -28,5 +28,17 @@ Experimento Flutter com Push Notification pelo Onesignal e Firebase
         * add line to final file:  apply plugin: 'com.google.gms.google-services'
     * restart / rebuild project
     
+3. OneSignal 
+    * Add onesignal_flutter: ^2.3.4 to pubspec.yaml
+    * project/android/build.gradle
+        * add into repositories      maven { url 'https://plugins.gradle.org/m2/'}
+        * add into dependencies      classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.12.1, 0.99.99]'
+    * project/flutterPush/android/app/build.gradle
+        * add into in final file, but -- BEFORE  LINE ---  "apply plugin: 'com.google.gms.google-services'"
+            * apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+    # IF errors
+        *  cd project/android
+        *  gradlew --stacktrace 
 
 
